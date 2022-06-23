@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65789554-2ada-469d-acca-732ec5a64347" name="Changes" comment="">
+    <list default="true" id="65789554-2ada-469d-acca-732ec5a64347" name="Changes" comment="Updated time zones">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DigitalClock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitalClock.java" afterDir="false" />
@@ -60,6 +60,14 @@
       <option name="presentableId" value="Default" />
       <updated>1655465967484</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed JLabel not appearing">
+      <created>1655970777399</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655970777399</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,5 +80,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed JLabel not appearing" />
+    <MESSAGE value="Updated time zones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated time zones" />
   </component>
 </project>
