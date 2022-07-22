@@ -1,11 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-import java.time.Clock;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects;
 import java.util.TimeZone;
 
 public class DigitalClock {
