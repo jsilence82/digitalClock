@@ -1,10 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.time.Clock;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.util.TimeZone;
 
 public class DigitalClock {
 
@@ -18,7 +20,13 @@ public class DigitalClock {
         currentTimeLabel.setFont(new Font("Arial", Font.BOLD,50));
         clockFrame.getContentPane().add(currentTimeLabel, BorderLayout.NORTH);
 
-        String[] timeZonesChoice = {"UTC", "PST", "MST", "CST", "EST", "CEST"};
+        String[] timeZonesChoice = TimeZone.getAvailableIDs();
+        for (String id:timeZonesChoice){
+            TimeZone zone = TimeZone.getTimeZone(id);
+            int offset = zone.getRawOffset()/1000;
+            int hour = offset/3600;
+            int minutes = (offset % 3600) / 60;
+        }
         JComboBox<String> jComboBox = new JComboBox<>(timeZonesChoice);
         jComboBox.setPreferredSize(new Dimension(5, 10));
         jComboBox.setSelectedIndex(0);
@@ -45,23 +53,14 @@ public class DigitalClock {
         jComboBox.addActionListener(e -> {
             Timer uTCTimer = new Timer(delay, i -> {
                 String timeZone = jComboBox.getItemAt(jComboBox.getSelectedIndex());
-                OffsetDateTime current;
-            if (Objects.equals(timeZone, "PST")) {
-                 current = OffsetDateTime.now(ZoneOffset.of("-08:00"));
-            } else if (Objects.equals(timeZone,"MST")) {
-                current = OffsetDateTime.now(ZoneOffset.of("-07:00"));
-            } else if (Objects.equals(timeZone, "CST")) {
-                current = OffsetDateTime.now(ZoneOffset.of("-06:00"));
-            } else if (Objects.equals(timeZone, "EST")) {
-                current = OffsetDateTime.now(ZoneOffset.of("-05:00"));
-            } else if (Objects.equals(timeZone, "CEST")) {
-                current = OffsetDateTime.now(ZoneOffset.of("+02:00"));
-            } else {
-                current = OffsetDateTime.now(ZoneOffset.UTC);
-            }
-            DateTimeFormatter formatted = DateTimeFormatter.ofPattern("HH:mm:ss");
-            String formattedTimeZone = current.format(formatted);
-            uTCTimeLabel.setText(formattedTimeZone);
+                TimeZone zone = TimeZone.getTimeZone(timeZone);
+                int offset = zone.getRawOffset()/1000;
+                int hour = offset/3600;
+                int minutes = (offset % 3600)/60;
+                OffsetDateTime current = OffsetDateTime.now(ZoneOffset.ofHoursMinutes(hour,minutes));
+                DateTimeFormatter formatted = DateTimeFormatter.ofPattern("HH:mm:ss");
+                String formattedTimeZone = current.format(formatted);
+                uTCTimeLabel.setText(formattedTimeZone);
             });
             uTCTimer.start();
             });
