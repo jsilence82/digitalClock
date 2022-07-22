@@ -21,12 +21,6 @@ public class DigitalClock {
         clockFrame.getContentPane().add(currentTimeLabel, BorderLayout.NORTH);
 
         String[] timeZonesChoice = TimeZone.getAvailableIDs();
-        for (String id:timeZonesChoice){
-            TimeZone zone = TimeZone.getTimeZone(id);
-            int offset = zone.getRawOffset()/1000;
-            int hour = offset/3600;
-            int minutes = (offset % 3600) / 60;
-        }
         JComboBox<String> jComboBox = new JComboBox<>(timeZonesChoice);
         jComboBox.setPreferredSize(new Dimension(5, 10));
         jComboBox.setSelectedIndex(0);
