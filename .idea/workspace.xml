@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65789554-2ada-469d-acca-732ec5a64347" name="Changes" comment="Changed handling of time zones.">
-      <change afterPath="$PROJECT_DIR$/src/Viewer.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Viewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="65789554-2ada-469d-acca-732ec5a64347" name="Changes" comment="Updated layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DigitalClock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitalClock.java" afterDir="false" />
     </list>
@@ -105,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658480367779</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated layout">
+      <created>1669645214143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645214143</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated layout">
+      <created>1669645246743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645246743</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +135,7 @@
     <MESSAGE value="Updated time zones" />
     <MESSAGE value="Deleted unnecessary imports" />
     <MESSAGE value="Changed handling of time zones." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed handling of time zones." />
+    <MESSAGE value="Updated layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated layout" />
   </component>
 </project>

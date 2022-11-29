@@ -12,21 +12,21 @@ public class DigitalClock extends JFrame {
     public DigitalClock() {
         setTitle("The Time is...");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 500, 200);
+        setBounds(100, 100, 400, 180);
 
         JPanel contentPanel = new JPanel();
-        contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPanel.setBorder(new EmptyBorder(2, 5, 2, 2));
 
         setContentPane(contentPanel);
         GridBagLayout gbl_contentPane = new GridBagLayout();
-        gbl_contentPane.columnWidths = new int[]{141, 141, 0};
-        gbl_contentPane.rowHeights = new int[]{48, 46, 0};
+        gbl_contentPane.columnWidths = new int[]{0, 0, 0};
+        gbl_contentPane.rowHeights = new int[]{0, 0, 0};
         gbl_contentPane.columnWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
         gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
         contentPanel.setLayout(gbl_contentPane);
 
         JLabel lblNewLabel = new JLabel("Local Time", SwingConstants.CENTER);
-        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 17));
+        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
         GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
         gbc_lblNewLabel.fill = GridBagConstraints.BOTH;
         gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
@@ -36,7 +36,7 @@ public class DigitalClock extends JFrame {
 
 
         JLabel currentTimeLabel = new JLabel("", SwingConstants.CENTER);
-        currentTimeLabel.setFont(new Font("Tahoma", Font.BOLD, 17));
+        currentTimeLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
         GridBagConstraints gbc_local = new GridBagConstraints();
         gbc_local.fill = GridBagConstraints.BOTH;
         gbc_local.insets = new Insets(0, 0, 5, 0);
@@ -56,11 +56,11 @@ public class DigitalClock extends JFrame {
 
 
         JLabel uTCTimeLabel = new JLabel("", SwingConstants.CENTER);
-        uTCTimeLabel.setFont(new Font("Tahoma", Font.BOLD, 17));
-        GridBagConstraints gbc_utcTimelablel = new GridBagConstraints();
-        gbc_utcTimelablel.gridx = 1;
-        gbc_utcTimelablel.gridy = 2;
-        contentPanel.add(uTCTimeLabel, gbc_utcTimelablel);
+        uTCTimeLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+        GridBagConstraints gbc_utcTimeLabel = new GridBagConstraints();
+        gbc_utcTimeLabel.gridx = 1;
+        gbc_utcTimeLabel.gridy = 2;
+        contentPanel.add(uTCTimeLabel, gbc_utcTimeLabel);
 
         int delay = 100;
         Timer currentTimer = new Timer(delay, e -> {
